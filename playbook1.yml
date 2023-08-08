@@ -1,16 +1,17 @@
----
 - name: install nginx server
-hosts: all
-become: yes
-tasks:
-- name: Update apt cache
-apt:
-update_cache: yes
-- name: install nginx
-apt:
-name: nginx
-state: present
-- name: Install MySQL client package
-apt:
-name: mysql-client
-state: present
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Install MySQL client package
+      apt:
+        name: mysql-client
+        state: present

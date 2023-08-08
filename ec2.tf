@@ -26,9 +26,9 @@ aws_instance.chandudemo-1,
 aws_instance.chandudemo-2
 ]
 provisioner "local-exec"{
-command = "ansible-playbook -i '${aws_instance.chandudemo-1.public_ip},' -u ubuntu --private-key ~/ohiopem.pem playbook.yml"
+command = "ansible-playbook -i '${aws_instance.chandudemo-1.public_ip},' -u ubuntu --private-key ~/aws_key.pem playbook.yml"
 }
 provisioner "local-exec"{
-command = "ansible-playbook -i '${aws_instance.chandudemo-2.public_ip},' -u ubuntu --private-key ~/ohiopem.pem playbook1.yml"
+command = "ansible-playbook -i '${aws_instance.chandudemo-2.public_ip},' -u ubuntu --private-key ~/aws_key.pem playbook1.yml"
 }
 }

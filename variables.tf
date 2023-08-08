@@ -13,6 +13,6 @@ variable "ec2info" {
 default = {
 ami= "ami-00eeedc4036573771"
 instance_type= "t2.micro"
-key_name = "ohiopem"
+key_name = "aws_key"
 }
 }
