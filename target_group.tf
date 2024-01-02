@@ -13,4 +13,8 @@ resource "aws_lb_target_group_attachment" "attachment-1" {
 target_group_arn = "${aws_lb_target_group.target-elb.arn}"
 target_id = "${aws_instance.chandudemo-2.id}"
 port = 80
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
